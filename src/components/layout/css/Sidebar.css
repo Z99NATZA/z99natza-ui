@@ -1,0 +1,44 @@
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.glow-effect {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #10b981, #06b6d4, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.menu-icon span {
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}

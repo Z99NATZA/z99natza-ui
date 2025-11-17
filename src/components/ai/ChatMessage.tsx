@@ -1,4 +1,4 @@
-import "@/components/ai/css/chat-message.css";
+import "@/components/ai/css/ChatMessage.css";
 import Avatar from "./Avatar";
 import type { ChatMessageType } from "@/types/ai/chat";
 import { formatTime } from "@/utils/time";

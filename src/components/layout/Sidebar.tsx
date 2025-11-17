@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
+import "@/components/layout/css/Sidebar.css";
 
 type SidebarProps = {
     isOpen: boolean;

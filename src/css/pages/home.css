@@ -1,0 +1,53 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:active {
+    transform: scale(0.98);
+}
+
+@media (min-width: 768px) {
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    }
+}

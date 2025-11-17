@@ -1,5 +1,5 @@
 import React from "react";
-import "@/components/ai/css/chat-input.css";
+import "@/components/ai/css/ChatInput.css";
 
 type ChatInputProps = {
     value: string;

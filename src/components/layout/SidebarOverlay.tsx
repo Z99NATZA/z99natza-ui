@@ -1,19 +1,3 @@
-// import { memo } from "react";
-
-// type SidebarOverlayProps = {
-//     isOpen: boolean;
-//     closeSidebar: () => void;
-// };
-
-// function SidebarOverlay({ isOpen, closeSidebar }: SidebarOverlayProps) {
-//     return (
-//         <div onClick={closeSidebar} className={`${!isOpen ? 'hidden' : ''} fixed inset-0 bg-black/50 backdrop-blur-sm z-40`}></div>
-//     );
-// }
-
-// export default memo(SidebarOverlay);
-
-
 import { memo } from "react";
 
 type SidebarOverlayProps = {
