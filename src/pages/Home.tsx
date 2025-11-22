@@ -1,7 +1,22 @@
 import Footer from "@/components/layout/Footer";
 import "@/css/pages/home.css";
+import axios from "axios";
+import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/users')
+            .then(({ data }) => {
+                console.log(data);
+            })
+            .catch(err => console.error(err));
+    }, []);
+    
+    const imgSilenceSuzuka = 'https://anibase.net/files/c89c18ac0ce693b956c42ce3bb7ccaae/320';
+    const imgRyuuLion = 'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/53344547-f1fa-4d6c-899c-479d2ad7e318/anim=false,width=450,optimized=true/d423e-1981001601.jpeg';
+    const imgRapi = 'https://images.steamusercontent.com/ugc/11348417653749197260/7DD6A6B57F74646BD6FB155AD627CB8A832257AC/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false';
+    const imgSharkChan = '/images/logo/shark-chan.png';
+
     return (
         <div>
             {/* Hero Section */}
@@ -44,42 +59,48 @@ export default function Home() {
                     </h3>
 
                     <div className="space-y-4 text-slate-300 text-sm md:text-base slide-in delay-1">
-                        <p>นักพัฒนาเว็บไซต์ที่หลงใหลในการดูอนิเมะ</p>
+                        <p>นักพัฒนาเว็บไซต์ที่หลงใหลในสาวอนิเมะ</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-2">
-                            <div className="text-3xl mb-2">💻</div>
-                            <div className="text-emerald-400 font-bold text-xl">
-                                10+
-                            </div>
+                            <img 
+                                src={imgSilenceSuzuka} 
+                                alt="Silence suzuka" 
+                                className="w-full h-40 object-cover object-top rounded-lg mb-2"
+                            />
                             <div className="text-slate-400 text-sm">
-                                โปรเจกต์
+                                Silence suzuka
                             </div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-3">
-                            <div className="text-3xl mb-2">🎯</div>
-                            <div className="text-cyan-400 font-bold text-xl">
-                                5+
-                            </div>
+                            <img 
+                                src={imgRyuuLion} 
+                                alt="Ryuu lion" 
+                                className="w-full h-40 object-cover object-top rounded-lg mb-2"
+                            />
                             <div className="text-slate-400 text-sm">
-                                ประสบการณ์
+                                Ryuu lion
                             </div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-4">
-                            <div className="text-3xl mb-2">⚡</div>
-                            <div className="text-emerald-400 font-bold text-xl">
-                                10+
+                            <img 
+                                src={imgRapi}
+                                alt="Rapi" 
+                                className="w-full h-40 object-cover object-top rounded-lg mb-2"
+                            />
+                            <div className="text-slate-400 text-sm">
+                                Rapi
                             </div>
-                            <div className="text-slate-400 text-sm">ทักษะ</div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-4">
-                            <div className="text-3xl mb-2">🌟</div>
-                            <div className="text-cyan-400 font-bold text-xl">
-                                100%
-                            </div>
+                            <img 
+                                src={imgSharkChan}
+                                alt="Shark chan" 
+                                className="w-full h-40 object-cover object-top rounded-lg mb-2"
+                            />
                             <div className="text-slate-400 text-sm">
-                                ความบ้า
+                                Shark chan
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import ChatInput from "@/components/ai/ChatInput";
 import WelcomeScreen from "@/components/ai/WelcomeScreen";
 import type { ChatMessageType } from "@/types/ai/chat";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Ai() {
     const [value, setValue] = useState('');
@@ -10,9 +11,9 @@ export default function Ai() {
     const [showWelcomeScreen, setShowWelcomeScreen] = useState(true);
     const [messages, setMessages] = useState<ChatMessageType[]>([]);
     
-    const sendMessage = () => {
+    const sendMessage = async () => {
         setShowWelcomeScreen(false);
-        
+
         setMessages((prev) => [
             ...prev,
             {
@@ -21,19 +22,42 @@ export default function Ai() {
                 timestamp: new Date()
             }
         ]);
-        
+
         setValue('');
-        
-        setTimeout(() => {
+
+        try {
+            const response = await axios.post('http://localhost:3000/api/ai/chatv1', {
+                message: value
+            });
+
+            const data = response.data;
+
+            if (Array.isArray(data)) {
+                const aiMessages = data.filter((msg: ChatMessageType) => msg.sender === 'ai');
+                
+                if (aiMessages.length > 0) {
+                    setMessages((prev) => [
+                        ...prev,
+                        ...aiMessages.map((msg: ChatMessageType) => ({
+                            message: msg.message,
+                            sender: msg.sender,
+                            timestamp: new Date(msg.timestamp),
+                        }))
+                    ]);
+                }
+            }
+        } catch (error) {
+            console.log(error)
+            
             setMessages((prev) => [
                 ...prev,
                 {
-                    message: "ผบ.ว่าไงขาาาาา",
+                    message: "ขอโทษค้าาาาา ระบบขัดข้อง!",
                     sender: "ai",
                     timestamp: new Date(),
                 },
             ]);
-        }, 100);
+        }
     }
     
     return (

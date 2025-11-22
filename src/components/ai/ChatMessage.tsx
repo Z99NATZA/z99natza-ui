@@ -14,7 +14,7 @@ export default function ChatMessage({ message, sender, timestamp }: ChatMessageT
                     <Avatar sender={sender} />
                     
                     {/* Bubble */}
-                    <div className={`${isUser ? 'chat-bubble-user' : 'chat-bubble-ai'} px-4 py-3 rounded-2xl rounded-br-sm`}>
+                    <div className={`${isUser ? 'chat-bubble-user rounded-br-sm' : 'chat-bubble-ai rounded-bl-sm'} px-4 py-3 rounded-2xl`}>
                         <p className="text-sm leading-relaxed whitespace-pre-wrap">
                             {message}
                         </p>
