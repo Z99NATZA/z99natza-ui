@@ -1,3 +1,4 @@
+import { me } from "@/constants/me";
 import { memo } from "react";
 
 type HeaderProps = {
@@ -19,7 +20,7 @@ function Header({ onMenuClick }: HeaderProps) {
                         <span></span>
                     </button>
                     <h1 className="text-xl md:text-2xl font-bold gradient-text">
-                        Z99NATZA
+                        {me.name}
                     </h1>
                 </div>
                 <div className="hidden md:flex gap-6 text-sm">

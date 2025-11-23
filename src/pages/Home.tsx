@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer";
 import "@/css/pages/home.css";
 import axios from "axios";
 import { useEffect } from "react";
+import { me } from "@/constants/me";
 
 export default function Home() {
     useEffect(() => {
@@ -18,6 +19,7 @@ export default function Home() {
     const imgSharkChan = '/images/logo/shark-chan.png';
     
     const aboutDescription = 'นักพัฒนาเว็บไซต์ ที่หลงใหลในการดูอนิเมะและเล่นเกมเป็นอย่างมาก';
+    const heartPoints = 148338;
 
     return (
         <div>
@@ -35,11 +37,11 @@ export default function Home() {
                     </div>
 
                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold gradient-text fade-in-up">
-                        Z99NATZA
+                        {me.name}
                     </h2>
 
                     <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto fade-in-up delay-1">
-                        ❤️ 137643
+                        ❤️ {heartPoints}
                     </p>
 
                     <div className="flex gap-4 justify-center fade-in-up delay-2">

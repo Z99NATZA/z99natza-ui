@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "@/components/layout/css/Sidebar.css";
+import { me } from "@/constants/me";
 
 type SidebarProps = {
     isOpen: boolean;
@@ -39,7 +40,7 @@ function Sidebar({ isOpen, closeSidebar }: SidebarProps) {
                         </div>
                     </div>
                     <h2 className="text-xl font-bold gradient-text mb-1">
-                        Z99NATZA
+                        {me.name}
                     </h2>
                     <p className="text-sm text-slate-400">Web Developer</p>
                 </div>
