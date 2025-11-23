@@ -18,7 +18,7 @@ export default function ChatMessage({ message, sender, timestamp }: ChatMessageT
                         <p className="text-sm leading-relaxed whitespace-pre-wrap">
                             {message}
                         </p>
-                        <div className="text-xs text-slate-400 mt-1">
+                        <div className={`${isUser ? 'text-end' : 'text-start'} text-xs text-slate-400 mt-1`}>
                             {formatTime(timestamp)}
                         </div>
                     </div>

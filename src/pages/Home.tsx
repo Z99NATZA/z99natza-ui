@@ -12,10 +12,12 @@ export default function Home() {
             .catch(err => console.error(err));
     }, []);
     
-    const imgSilenceSuzuka = 'https://anibase.net/files/c89c18ac0ce693b956c42ce3bb7ccaae/320';
-    const imgRyuuLion = 'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/53344547-f1fa-4d6c-899c-479d2ad7e318/anim=false,width=450,optimized=true/d423e-1981001601.jpeg';
-    const imgRapi = 'https://images.steamusercontent.com/ugc/11348417653749197260/7DD6A6B57F74646BD6FB155AD627CB8A832257AC/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false';
+    const imgSilenceSuzuka = '/images/logo/silence-suzuka.jpg';
+    const imgRyuuLion = 'https://images-ng.pixai.art/images/orig/06ac951b-bcd8-4673-adce-4ea9d40f3234';
+    const imgRapi = '/images/logo/rapi.png';
     const imgSharkChan = '/images/logo/shark-chan.png';
+    
+    const aboutDescription = 'นักพัฒนาเว็บไซต์ ที่หลงใหลในการดูอนิเมะและเล่นเกมเป็นอย่างมาก';
 
     return (
         <div>
@@ -59,7 +61,7 @@ export default function Home() {
                     </h3>
 
                     <div className="space-y-4 text-slate-300 text-sm md:text-base slide-in delay-1">
-                        <p>นักพัฒนาเว็บไซต์ที่หลงใหลในสาวอนิเมะ</p>
+                        <p>{aboutDescription}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -212,7 +214,7 @@ export default function Home() {
                         Socials
                     </h3>
                     <p className="text-slate-300 mb-8 text-sm md:text-base">
-                        ❤️ Shark chan ❤️
+                        ❤️ Love you ❤️
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-4 mb-8">
