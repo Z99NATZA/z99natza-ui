@@ -4,12 +4,15 @@ import WelcomeScreen from "@/components/ai/WelcomeScreen";
 import type { ChatMessageType } from "@/types/ai/chat";
 import { useState } from "react";
 import axios from "axios";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Ai() {
     const [value, setValue] = useState('');
     const placeholder = 'พิมพ์ข้อความ...';
     const [showWelcomeScreen, setShowWelcomeScreen] = useState(true);
     const [messages, setMessages] = useState<ChatMessageType[]>([]);
+    
+    const [chatId] = useState(() => uuidv4());
     
     const sendMessage = async () => {
         setShowWelcomeScreen(false);
@@ -26,8 +29,10 @@ export default function Ai() {
         setValue('');
 
         try {
-            const response = await axios.post('http://localhost:3000/api/ai/chatv1', {
-                message: value
+            const response = await axios.post('http://localhost:3000/api/ai/chat', {
+                message: value,
+                sender: 'user',
+                chatId,
             });
 
             const data = response.data;
@@ -61,7 +66,7 @@ export default function Ai() {
     }
     
     return (
-        <div className="px-4 py-12 md:py-16 max-w-6xl mx-auto">
+        <div className="px-4 py-12 md:py-20 max-w-6xl mx-auto">
             {showWelcomeScreen && <WelcomeScreen />}
             {!showWelcomeScreen && <ChatContainer messages={messages} />}
             

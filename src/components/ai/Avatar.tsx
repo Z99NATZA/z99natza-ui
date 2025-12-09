@@ -14,7 +14,7 @@ export default function Avatar({ sender }: AvatarProps) {
             {sender === 'ai' &&
                 <div className="shrink-0 w-8 h-8 rounded-full bg-linear-to-br from-emerald-400 to-cyan-400 flex items-center justify-center overflow-hidden">
                     <img
-                        src="/images/logo/shark-chan.png"
+                        src="/images/waifu/shark-chan-chibi-02.png"
                         alt="Shark Chan"
                         className="w-full h-full object-cover"
                     />

@@ -13,12 +13,17 @@ export default function Home() {
             .catch(err => console.error(err));
     }, []);
     
-    const imgSilenceSuzuka = '/images/logo/silence-suzuka.jpg';
-    const imgRyuuLion = 'https://images-ng.pixai.art/images/orig/06ac951b-bcd8-4673-adce-4ea9d40f3234';
-    const imgRapi = '/images/logo/rapi.png';
-    const imgSharkChan = '/images/logo/shark-chan.png';
+    const img01 = '/images/waifu/wallpaperwaifu-01.jpg';
+    const img02 = 'https://images-ng.pixai.art/images/orig/06ac951b-bcd8-4673-adce-4ea9d40f3234';
+    const img03 = '/images/waifu/rapi.png';
+    const img04 = '/images/waifu/shark-chan-original.png';
     
-    const aboutDescription = 'นักพัฒนาเว็บไซต์ ที่หลงใหลในการดูอนิเมะและเล่นเกมเป็นอย่างมาก';
+    const name01 = 'Wallpaper waifu';
+    const name02 = 'Ryuu lion';
+    const name03 = 'Rapi';
+    const name04 = 'Shark chan';
+    
+    const aboutDescription = 'ไวฟุ';
     const heartPoints = 148338;
 
     return (
@@ -29,7 +34,7 @@ export default function Home() {
                     <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-linear-to-br from-emerald-400 via-cyan-400 to-white p-1 float-animation glow-effect">
                         <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
                             <img
-                                src="/images/logo/shark-chan.png"
+                                src="/images/waifu/shark-chan-chibi-02.png"
                                 alt="Profile Picture"
                                 className="w-full h-full object-cover"
                             />
@@ -55,11 +60,11 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* About Section */}
+            {/* Waifu Section */}
             <section className="px-4 py-12 md:py-16 max-w-6xl mx-auto">
                 <div className="bg-slate-800/50 rounded-3xl p-6 md:p-10 border border-emerald-500/20 card-hover">
                     <h3 className="text-2xl md:text-3xl font-bold mb-6 gradient-text slide-in">
-                        เกี่ยวกับฉัน
+                        ฉันคนนี้ ใจดีเสมอ
                     </h3>
 
                     <div className="space-y-4 text-slate-300 text-sm md:text-base slide-in delay-1">
@@ -69,42 +74,42 @@ export default function Home() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-2">
                             <img 
-                                src={imgSilenceSuzuka} 
-                                alt="Silence suzuka" 
+                                src={img01} 
+                                alt={name01}
                                 className="w-full h-40 object-cover object-top rounded-lg mb-2"
                             />
                             <div className="text-slate-400 text-sm">
-                                Silence suzuka
+                                {name01}
                             </div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-3">
                             <img 
-                                src={imgRyuuLion} 
-                                alt="Ryuu lion" 
+                                src={img02} 
+                                alt={name02}
                                 className="w-full h-40 object-cover object-top rounded-lg mb-2"
                             />
                             <div className="text-slate-400 text-sm">
-                                Ryuu lion
+                                {name02}
                             </div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-4">
                             <img 
-                                src={imgRapi}
-                                alt="Rapi" 
+                                src={img03}
+                                alt={name03}
                                 className="w-full h-40 object-cover object-top rounded-lg mb-2"
                             />
                             <div className="text-slate-400 text-sm">
-                                Rapi
+                                {name03}
                             </div>
                         </div>
                         <div className="bg-slate-700/50 rounded-xl p-4 text-center card-hover fade-in-up delay-4">
                             <img 
-                                src={imgSharkChan}
-                                alt="Shark chan" 
+                                src={img04}
+                                alt={name04}
                                 className="w-full h-40 object-cover object-top rounded-lg mb-2"
                             />
                             <div className="text-slate-400 text-sm">
-                                Shark chan
+                                {name04}
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ function Sidebar({ isOpen, closeSidebar }: SidebarProps) {
                     <div className="w-20 h-20 mx-auto rounded-full bg-linear-to-br from-emerald-400 via-cyan-400 to-white p-1 float-animation glow-effect">
                         <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
                             <img
-                                src="/images/logo/shark-chan.png"
+                                src="/images/waifu/shark-chan-chibi-02.png"
                                 alt="Profile Picture"
                                 className="w-full h-full object-cover"
                             />
@@ -69,7 +69,7 @@ function Sidebar({ isOpen, closeSidebar }: SidebarProps) {
                         }`}
                         onClick={closeSidebar}
                     >
-                        <img src="/images/logo/shark-chan.png" alt="AI" className="w-5 h-5 object-contain rounded-full" />
+                        <img src="/images/waifu/shark-chan-chibi-02.png" alt="AI" className="w-5 h-5 object-cover object-top rounded-full" />
                         <span className="text-sm font-medium">AI</span>
                     </Link>
                 </nav>

@@ -11,10 +11,12 @@ export default function ChatMessage({ message, sender, timestamp }: ChatMessageT
             <div className={`${isUser ? 'justify-end' : 'justify-start'} flex`}>
                 <div className={`${isUser && 'flex-row-reverse'} flex max-w-[85%] sm:max-w-[75%] gap-3 items-end`}>
                     {/* Avatar */}
-                    <Avatar sender={sender} />
+                    <div className={`${isUser ? 'hidden' : ''}`}>
+                        <Avatar sender={sender} />
+                    </div>
                     
                     {/* Bubble */}
-                    <div className={`${isUser ? 'chat-bubble-user rounded-br-sm' : 'chat-bubble-ai rounded-bl-sm'} px-4 py-3 rounded-2xl`}>
+                    <div className={`${isUser ? 'chat-bubble-user rounded-br-sm' : 'chat-bubble-ai rounded-bl-sm'} px-4 py-3 rounded-2xl my-1`}>
                         <p className="text-sm leading-relaxed whitespace-pre-wrap">
                             {message}
                         </p>
