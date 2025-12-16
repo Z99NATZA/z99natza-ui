@@ -11,11 +11,12 @@ export default function Ai() {
     const placeholder = 'พิมพ์ข้อความ...';
     const [showWelcomeScreen, setShowWelcomeScreen] = useState(true);
     const [messages, setMessages] = useState<ChatMessageType[]>([]);
-    
     const [chatId] = useState(() => uuidv4());
+    const [loading, setLoading] = useState(false);
     
     const sendMessage = async () => {
         setShowWelcomeScreen(false);
+        setLoading(true);
 
         setMessages((prev) => [
             ...prev,
@@ -51,7 +52,8 @@ export default function Ai() {
                     ]);
                 }
             }
-        } catch (error) {
+        } 
+        catch (error) {
             console.log(error)
             
             setMessages((prev) => [
@@ -63,12 +65,15 @@ export default function Ai() {
                 },
             ]);
         }
+        finally {
+            setLoading(false);
+        }
     }
     
     return (
         <div className="px-4 py-12 md:py-20 max-w-6xl mx-auto">
             {showWelcomeScreen && <WelcomeScreen />}
-            {!showWelcomeScreen && <ChatContainer messages={messages} />}
+            {!showWelcomeScreen && <ChatContainer messages={messages} loading={loading} />}
             
             <ChatInput 
                 value={value} 
