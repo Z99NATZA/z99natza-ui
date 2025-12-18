@@ -11,7 +11,7 @@ export default function Ai() {
     const placeholder = 'พิมพ์ข้อความ...';
     const [showWelcomeScreen, setShowWelcomeScreen] = useState(true);
     const [messages, setMessages] = useState<ChatMessageType[]>([]);
-    const [chatId] = useState(() => uuidv4());
+    const [chatId] = useState(() => `${Date.now()}_${uuidv4()}`);
     const [loading, setLoading] = useState(false);
     
     const sendMessage = async () => {
