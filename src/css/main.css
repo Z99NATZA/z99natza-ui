@@ -1,26 +1,28 @@
 @import "tailwindcss";
+@import "./theme.css";
 
-/* ===== GLOBAL SCROLLBAR ===== */
+/* ---------- GLOBAL SCROLLBAR ---------- */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0d1b2a;
-    border-radius: 10px;
+    background: var(--color-bg-main);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #034d3d 0%, #064e5a 50%, #065666 100%);
+    background: linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--color-primary) 50%, var(--color-black) 40%),
+        color-mix(in oklab, var(--color-secondary), var(--color-black) 40%)
+    );
     border-radius: 12px;
-    box-shadow: 
-        0 0 10px #22d3ee77, 
-        0 0 4px #34d39955;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #045a4a 0%, #076270 50%, #077080 100%);
-    box-shadow:
-        0 0 12px #22d3eeaa,
-        0 0 6px #34d399aa;
+    background: linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--color-primary), var(--color-black) 30%),
+        color-mix(in oklab, var(--color-secondary), var(--color-black) 20%)
+    );
 }

@@ -1,0 +1,23 @@
+@theme {
+    /* ---------- Base ---------- */
+    --color-bg-main: #0b1220;
+    --color-bg-card: #0f172a;
+    --color-bg-muted: #334155;
+
+    --color-text-main: #e5e7eb;
+    --color-text-muted: #94a3b8;
+
+    /* ---------- Brand ---------- */
+    --color-primary: #10b981;
+    --color-secondary: #06b6d4;
+    --color-accent: #22d3ee;
+    --color-black: #000000;
+
+    /* ---------- Border ---------- */
+    --color-border-main: #1f2937;
+    --color-border-accent: #10b981;
+
+    /* ---------- Glow ---------- */
+    --color-glow-primary: #22d3ee;
+    --color-glow-secondary: #34d399;
+}

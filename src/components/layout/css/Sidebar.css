@@ -4,8 +4,8 @@
 }
 
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
-    50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
+    0%, 100% { box-shadow: 0 0 20px color-mix(in oklab, var(--color-primary) 30%, transparent); }
+    50% { box-shadow: 0 0 30px color-mix(in oklab, var(--color-secondary) 60%, transparent); }
 }
 
 .float-animation {
@@ -17,7 +17,7 @@
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #10b981, #06b6d4, #ffffff);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -28,7 +28,7 @@
     display: block;
     width: 100%;
     height: 2px;
-    background: linear-gradient(135deg, #10b981, #06b6d4);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
 }
 
 .menu-icon.active span:nth-child(1) {

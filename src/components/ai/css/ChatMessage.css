@@ -11,3 +11,18 @@
     background: rgba(51, 65, 85, 0.5);
     border: 1px solid rgba(71, 85, 105, 0.3);
 }
+
+.chat-bubble-user {
+    background: linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--color-primary), transparent 80%),
+        color-mix(in oklab, var(--color-secondary), transparent 80%)
+    );
+    border: 1px solid color-mix(in oklab, var(--color-primary), transparent 60%);
+}
+
+.chat-bubble-ai {
+    background: color-mix(in oklab, var(--color-bg-muted), transparent 50%);
+    border: 1px solid
+        color-mix(in oklab, var(--color-border-main), transparent 60%);
+}
