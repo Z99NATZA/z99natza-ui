@@ -1,5 +1,5 @@
 import Footer from "@/components/layout/Footer";
-import "@/css/pages/home.css";
+import "@/pages/css/home.css";
 import axios from "axios";
 import { useEffect } from "react";
 import { me } from "@/constants/me";
@@ -14,7 +14,7 @@ export default function Home() {
     }, []);
     
     const img01 = '/images/waifu/wallpaperwaifu-01.jpg';
-    const img02 = 'https://images-ng.pixai.art/images/orig/06ac951b-bcd8-4673-adce-4ea9d40f3234';
+    const img02 = '/images/waifu/ryuu-lion.jpg';
     const img03 = '/images/waifu/rapi.png';
     const img04 = '/images/waifu/shark-chan-original.png';
     
@@ -23,7 +23,7 @@ export default function Home() {
     const name03 = 'Rapi';
     const name04 = 'Shark chan';
     
-    const aboutDescription = 'ไวฟุ';
+    const waifu = 'ไวฟุ';
     const heartPoints = 148338;
 
     return (
@@ -68,7 +68,7 @@ export default function Home() {
                     </h3>
 
                     <div className="space-y-4 text-slate-300 text-sm md:text-base slide-in delay-1">
-                        <p>{aboutDescription}</p>
+                        <p>{waifu}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
